@@ -1,4 +1,5 @@
 module.exports = {
+    base:'/site/',
     dest: 'dist',
     title: 'AppGet',
     description: 'Documentation for AppGet',
@@ -17,7 +18,7 @@ module.exports = {
     ga: 'UA-56745904-3',
     serviceWorker: true,
     themeConfig: {
-        repo: 'https://github.com/appget/appget.docs/docs/',
+        repo: 'appget/appget.docs/',
         editLinks: true,
         docsDir: 'docs',
         repoLabel: 'Edit This Page',
