@@ -1,7 +1,7 @@
 module.exports = {
     base:'/',
     dest: 'dist',
-    title: 'AppGet',
+    title: 'AppGet Docs',
     description: 'Documentation for AppGet',
     head: [
         ['link', { rel: 'icon', href: `/logo.png` }],
@@ -22,20 +22,20 @@ module.exports = {
         editLinks: true,
         docsDir: 'docs',
         lastUpdated: 'Last Updated',
-        // nav: [
-        //     {
-        //         text: 'Guide',
-        //         link: '/guide/',
-        //     },
-        //     {
-        //         text: 'Config Reference',
-        //         link: '/config/'
-        //     },
-        //     {
-        //         text: 'Default Theme Config',
-        //         link: '/default-theme-config/'
-        //     }
-        // ],
+        nav: [
+            // {
+            //     text: 'Packages',
+            //     link: 'https://github.com/appget/appget.packages/tree/master/manifests/',
+            // },
+            // {
+            //     text: 'Config Reference',
+            //     link: '/config/'
+            // },
+            // {
+            //     text: 'Default Theme Config',
+            //     link: '/default-theme-config/'
+            // }
+        ],
         sidebar: [
             '/',
             {
