@@ -1,6 +1,7 @@
 # Getting Started
 
-__Install lastest version of AppGet from [GitHub](https://github.com/appget/appget/releases).__
+### Install AppGet
+Install lastest version of AppGet from [GitHub](https://github.com/appget/appget/releases)
 
 ### Installing an Application
 - Browse list of [Available Packages](https://github.com/appget/appget.packages/tree/master/manifests)
@@ -9,7 +10,7 @@ __Install lastest version of AppGet from [GitHub](https://github.com/appget/appg
     *eg. `appget install google-chrome`*
 
 
-### Searching the repository
+### Searching the Repository
 - You can search the AppGet repository for available packages using the `search` command
 
     *eg. `appget search chrome`*

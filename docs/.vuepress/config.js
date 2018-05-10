@@ -1,5 +1,5 @@
 module.exports = {
-    base:'/site/',
+    base:'/',
     dest: 'dist',
     title: 'AppGet',
     description: 'Documentation for AppGet',
@@ -16,12 +16,11 @@ module.exports = {
     ],
     port: 8000,
     ga: 'UA-56745904-3',
-    serviceWorker: true,
+    serviceWorker: false,
     themeConfig: {
         repo: 'appget/appget.docs/',
         editLinks: true,
         docsDir: 'docs',
-        repoLabel: 'Edit This Page',
         lastUpdated: 'Last Updated',
         // nav: [
         //     {
