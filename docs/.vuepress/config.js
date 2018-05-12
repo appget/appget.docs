@@ -38,13 +38,7 @@ module.exports = {
         ],
         sidebar: [
             '/',
-            {
-                title: 'Usage',
-                collapsable: false,
-                children: [
-                    '/usage/commands.md'
-                ]
-            },
+            '/commands/',
             {
                 title: 'Manifests',
                 collapsable: true,

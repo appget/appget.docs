@@ -11,7 +11,7 @@ This document describes detailed rules and exceptions when naming packages in Ap
 -  If the version number is arranged to occur in the middle of the App name, it should also be removed. Example: `IntelliJ IDEA 13 CE` becomes `IntelliJ IDEA CE`
 -  Remove from the end: hardware designations such as “for x86”, “32-bit”.
 -  Pay attention to details, for example: `"Git Hub" != "git_hub" != "GitHub"`
--  Inevitably, there are a small number of exceptions not covered by the rules. Don’t hesitate to `contact the maintainers`_ if you have a problem.
+-  Inevitably, there are a small number of exceptions not covered by the rules. Don’t hesitate to [contact the maintainers](https://github.com/appget/appget.packages/issues) if you need any clarification.
 
 ## Package ID
 
