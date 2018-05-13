@@ -1,22 +1,25 @@
 # Naming In AppGet
 
-This document describes detailed rules and exceptions when naming packages in AppGets.
+This document describes detailed rules and exceptions when naming packages in AppGet.
 
 ## App Name
 
 -  Start with the English marketing name of the Application, such as `Google Chrome`, `Microsoft Office`, `Dropbox`. Easiest way to find this name is too look up the application in Wikipedia, Article title is usually the name we are looking for.
 
--  Remove from the end version numbers or incremental release designations such as “alpha”, “beta”, or “release candidate”. Strings which distinguish different capabilities or codebases such as “Community Edition”, “Enterprise” are currently accepted. *Exception: when a number is not an incremental release counter, but part of product name `Microsoft Office 2012`.*
-
--  If the version number is arranged to occur in the middle of the App name, it should also be removed. Example: `IntelliJ IDEA 13 CE` becomes `IntelliJ IDEA CE`
--  Remove from the end: hardware designations such as “for x86”, “32-bit”.
--  Pay attention to details, for example: `"Git Hub" != "git_hub" != "GitHub"`
+-  Remove the  version numbers or release channel designations such as “alpha”, “beta” or “release candidate”. Terms which distinguish different capabilities or codebases such as “Community Edition”, “Enterprise” are accepted. 
+-  *Note: Numbers that are not incremental release counters, but part of product name `Microsoft Office 2012` should stay as part of the name.*
+-  Don't include hardware designations such as “for x86”, “32-bit”.
+-  Pay attention to details, for example: `Git Hub` vs `GitHub` vs `github`
 -  Inevitably, there are a small number of exceptions not covered by the rules. Don’t hesitate to [contact the maintainers](https://github.com/appget/appget.packages/issues) if you need any clarification.
 
 ## Package ID
 
 
-The “Package ID” is the primary identifier for an application in AppGet. It’s also the string people will use to interact with the package on their system.
+The “Package ID” is the primary identifier for an application in AppGet. It’s also the string people will use to install or  interact with the package.
+
+::: WARNING
+Package ID is not meant to EVER change, take extra care to pick an appropritate package name that follows the convention and rules bellow.
+:::
 
 To get from the App’s canonical name to the Package ID:
 

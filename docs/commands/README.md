@@ -3,18 +3,21 @@
 :::tip Commands
 All of the commands below share the following arguments
 
-`-v` or `--verbose`: Log more detailed information, usefull for diagnosing issues.
+`-v` or `--verbose`Log more detailed information, useful for diagnosing issues.
 
-`--help`: prints out list of available arguments and paramaters for the command
+`--help` prints out list of available arguments and parameters for the command
 
 :::
 ## Install
+
 `install` is the primary command of AppGet, you can use it to install any of the [available packages](https://github.com/appget/appget.packages/tree/master/manifests).
 
 #### Format:
+
 `install {package-id}`
 
 #### Arguments:
+
 `-i` or `--interactive`: Start the installer in *interactive mode*. This allows you to step through the installer manually and select any of the available options. By default AppGet starts installers in *passive mode*.
 
 `-s` or `--silent`: Start the installer in *silent mode*. This mode tries to hide as much of the installer interface as possible including all progress and status windows.
