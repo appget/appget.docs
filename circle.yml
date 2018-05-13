@@ -26,7 +26,7 @@ jobs:
           command: npm run build
       - run:
           name: Surge
-          command: surge --project ./dist --domain docs.appget.net
+          command: npm run surge
     #   - deploy:
     #       name: Build / Deploy
     #       command: npm run deploy

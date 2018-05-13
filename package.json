@@ -3,7 +3,8 @@
   "scripts": {
     "serve": "vuepress dev docs",
     "build": "vuepress build docs",
-    "deploy": "vuepress build docs && ts-node ./deploy.ts"
+    "deploy": "vuepress build docs && ts-node ./deploy.ts",
+    "surge": "surge --project ./dist --domain docs.appget.net"
   },
   "dependencies": {
     "@types/dotenv": "^4.0.3",
