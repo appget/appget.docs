@@ -17,8 +17,8 @@ This document describes detailed rules and exceptions when naming packages in Ap
 
 The “Package ID” is the primary identifier for an application in AppGet. It’s also the string people will use to install or  interact with the package.
 
-::: WARNING
-Package ID is not meant to EVER change, take extra care to pick an appropritate package name that follows the convention and rules bellow.
+::: warning Keep in Mind
+Package ID is not meant to EVER change, take extra care to pick an appropriate package name that follows the convention and rules bellow.
 :::
 
 To get from the App’s canonical name to the Package ID:
