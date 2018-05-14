@@ -22,6 +22,10 @@ module.exports = {
         editLinks: true,
         docsDir: 'docs',
         lastUpdated: 'Last Updated',
+        algolia: {
+            apiKey: 'd1275e06d940dd1c21dcd9200a559f8e',
+            indexName: 'appget'
+        },
         nav: [
             // {
             //     text: 'Packages',
