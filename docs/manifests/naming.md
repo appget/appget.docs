@@ -15,7 +15,7 @@ Here are some things to keep in mind when trying to create an ID for a new packa
 -  Only lowercase letters are allowed
 -  Usually don't contain the vendor name unless app name is too generic. For example use `adobe-reader` instead of `reader`
 -  Don't include the version of the App in the ID unless the version is part of the Product Name. This exception usually comes in the form of year, for example `office-2017` `visual-studio-community-2017`
--  Keep the edition of the app in the ID if more than one edition is available, eg. `docker-community-edition`
+-  Keep the edition of the app in the ID if more than one edition is available, e.g.. `docker-community-edition`
 -  Keep the release channel of the app in the ID except for the main channel. example, `chrome` should install the regular version of chrome while `chrome-canarry` should install the Canary release channel. Same rule and apply to LTS releases as well, for example `node` and `node-lts`
 -  Inevitably, there are a small number of exceptions not covered by the rules. Don’t hesitate to [contact the community](https://github.com/appget/appget.packages/issues) if you need any clarification.
 

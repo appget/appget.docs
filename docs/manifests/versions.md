@@ -1,10 +1,10 @@
 # Tags and Versions
 
-Even thought tags and versions might seem similar they server very different purposes. 
+Even thought tags and versions might seem similar they server very different purposes.
 
 
 
-**Tags** are used to select a specific releases when installing packages. 
+**Tags** are used to select a specific releases when installing packages.
 
 
 
@@ -14,14 +14,14 @@ Even thought tags and versions might seem similar they server very different pur
 
 Don't use tags for release channels (LTS, nightly, beta etc.), release channels should be appended to the ID of the package and submitted as separate package.  for example `chrome` and `chrome-canary` are considered two different packages. However different release channels can have underlying version tags, for example `node-lts:8.11` and `node:10.1`
 
-Tags should only be used when being able to install and stay on a specific major release is **both common AND desirable.** 
+Tags should only be used when being able to install and stay on a specific major release is **both common AND desirable.**
 
 
 
 When should a tag be used:
 
 - If newer versions of an application introduce **major** breaking change or drop of **major** functionality
-- If for **mission critical** reasons staying on specific version of a package is common, most commonly used for development platforms eg. Node, Python etc.
+- If for **mission critical** reasons staying on specific version of a package is common, most commonly used for development platforms e.g. Node, Python etc.
 - For licensing reasons, if newer versions of an app require a new/upgraded license/key
 
 
@@ -38,7 +38,7 @@ When should a tag be used:
 AppGet tries to follow the spirit of `Semantic Versioning`_. However we try to take a more realistic approach to Semantic Versioning rather than an idealistic one. If you have any questions feel free to `contact the maintainers`_
 
 ::: tip Note
-These rules only apply to applications that don't support silent background updates. *eg. Google Chrome, Dropbox*.
+These rules only apply to applications that don't support silent background updates. *e.g. Google Chrome, Dropbox*.
 For these applications you shouldn't specify a version in the manifest or as part of the manifest name.
 :::
 

@@ -36,7 +36,7 @@ installers:
 
 `home` Fully qualified product home page URL where users can see basic information about the application
 
-`repo` Fully qualified URL that points to the software repository hosting the source of the application, usually on Github, GitLab, Sourceforge etc.
+`repo` Fully qualified URL that points to the software repository hosting the source of the application, usually on GitHub, GitLab, SourceForge etc.
 
 `license` Name of the software license under which the application has been released
 
@@ -66,7 +66,7 @@ installers:
 
 `minWindowsVersion` Minimum version of Windows required for the application to install/work correctly
 
-*Table below describes the list of supported values for `minWindowsVersion`* 
+*Table below describes the list of supported values for `minWindowsVersion`*
 
 | Manifest Value | Desktop       | Server                 |
 | :------------- | ------------- | ---------------------- |
@@ -92,7 +92,7 @@ Here are some things to keep in mind when trying to create an ID for a new packa
 - Only lowercase letters are allowed
 - Usually don't contain the vendor name unless app name is too generic. For example use `adobe-reader` instead of `reader`
 - Don't include the version of the App in the ID unless the version is part of the Product Name. This exception usually comes in the form of year, for example `office-2017` `visual-studio-community-2017`
-- Keep the edition of the app in the ID if more than one edition is available, eg. `docker-community-edition`
+- Keep the edition of the app in the ID if more than one edition is available, e.g. `docker-community-edition`
 - Keep the release channel of the app in the ID except for the main channel. example, `chrome` should install the regular version of chrome while `chrome-canarry` should install the Canary release channel. Same rule and apply to LTS releases as well, for example `node` and `node-lts`
 - Inevitably, there are a small number of exceptions not covered by the rules. Don’t hesitate to [contact the community](https://github.com/appget/appget.packages/issues) if you need any clarification.
 
@@ -107,7 +107,7 @@ Package name is not nearly as important as the Package ID since it's only used f
 :::
 
 - Start with the English marketing name of the Application, such as `Google Chrome`, `Microsoft Office`, `Dropbox`. Easiest way to find this name is too look up the application in Wikipedia, Article title is usually the name we are looking for.
-- Remove the  version numbers 
+- Remove the  version numbers
 - Don't include hardware designations such as “for x86”, “32-bit”
 - Pay attention to details, for example: `Git Hub` vs `GitHub` vs `github`
 
@@ -115,11 +115,11 @@ Package name is not nearly as important as the Package ID since it's only used f
 
 ## Tags and Versions
 
-Even thought tags and versions might seem similar they server very different purposes. 
+Even thought tags and versions might seem similar they server very different purposes.
 
 
 
-**Tags** are used to select a specific releases when installing packages. 
+**Tags** are used to select a specific releases when installing packages.
 
 
 
@@ -131,14 +131,14 @@ AppGet uses tags similar to the way that docker repository uses tags using the f
 
 Don't use tags for release channels (LTS, nightly, beta, preview etc.). Release channels should be appended to the ID of the package [(See Package ID)](#package-id) and are considered separate packages.  For example `chrome` and `chrome-canary` are considered two different packages. However different release channels can have their own underlying version tags, for example `node-lts:8.11` and `node:10.1`
 
-Tags should only be used when being able to install and stay on a specific major release is **both common AND desirable.** 
+Tags should only be used when being able to install and stay on a specific major release is **both common AND desirable.**
 
 
 
 When should a tag be used:
 
 - If newer versions of an application introduce **major** breaking change or drop of **major** functionality
-- If for **mission critical** reasons staying on specific version of a package is common, most commonly used for development platforms eg. Node, Python etc.
+- If for **mission critical** reasons staying on specific version of a package is common, most commonly used for development platforms e.g. Node, Python etc.
 - For licensing reasons, if newer versions of an app require a new/upgraded license/key
 
 
@@ -148,7 +148,7 @@ When should a tag be used:
 AppGet tries to follow the spirit of `Semantic Versioning`_. However we try to take a more realistic approach to Semantic Versioning rather than an idealistic one. If you have any questions feel free to `contact the maintainers`_
 
 ::: tip Note
-These rules only apply to applications that don't support silent background updates. *eg. Google Chrome, Dropbox*.
+These rules only apply to applications that don't support silent background updates. *e.g. Google Chrome, Dropbox*.
 For these applications you shouldn't specify a version in the manifest or as part of the manifest name.
 :::
 
