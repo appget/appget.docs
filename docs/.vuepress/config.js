@@ -47,8 +47,7 @@ module.exports = {
                 title: 'Manifests',
                 collapsable: true,
                 children: [
-                    '/manifests/manifest.md',
-                    '/manifests/naming.md',
+                    '/manifests/',
                     '/manifests/versions.md'
                 ]
             }

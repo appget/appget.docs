@@ -12,9 +12,9 @@ Install latest version of AppGet from [GitHub](https://github.com/appget/appget/
 
 - Install a package:
 
-    ```shell
-    C:\appget install firefox
-    ```
+```shell
+C:\appget install firefox
+```
 
 
 
@@ -22,7 +22,7 @@ Install latest version of AppGet from [GitHub](https://github.com/appget/appget/
 
 - You can search the AppGet repository for available packages using the `search` command
 
-    ```shell
-    C:\appget search fire
-    ```
+```shell
+C:\appget search fire
+```
 

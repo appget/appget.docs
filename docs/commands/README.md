@@ -14,7 +14,7 @@ All of the commands below share the following arguments
 
 #### Format:
 
-`install {package-id}`
+`install {package-id}:{tag}`
 
 #### Arguments:
 
@@ -22,12 +22,18 @@ All of the commands below share the following arguments
 
 `-s` or `--silent`: Start the installer in *silent mode*. This mode tries to hide as much of the installer interface as possible including all progress and status windows.
 
-
 :::tip
-If AppGet can't find the exact package name you tried to install, it'll automatically trigger a search and provides you with suggestions. This means if you don't have to know the exact name of the package; you just try to install it and see what AppGet suggests.
+If AppGet can't find the exact package ID you tried to install, it'll automatically trigger a search and provides you with suggestions. This means you don't have to know the exact ID of the package; you just try to install it and see what AppGet suggests if no exact matches are found.
 :::
 
+
+
+#### Tags:
+
+
+
 #### Examples:
+
 `appget install google-chrome`
 
 `appget install git -s`

@@ -3,20 +3,9 @@
   "scripts": {
     "serve": "vuepress dev docs",
     "build": "vuepress build docs",
-    "deploy": "vuepress build docs && ts-node ./deploy.ts",
     "surge": "surge --project ./dist --domain docs.appget.net"
   },
   "dependencies": {
-    "@types/dotenv": "^4.0.3",
-    "@types/glob": "^5.0.35",
-    "@types/lodash": "^4.14.108",
-    "azure-storage": "^2.8.2",
-    "dotenv": "^5.0.1",
-    "glob": "^7.1.2",
-    "lodash": "^4.17.10",
-    "ts-node": "^6.0.3",
-    "tslint": "^5.10.0",
-    "typescript": "^2.8.3",
     "vuepress": "^0.8.4"
   },
   "devDependencies": {
