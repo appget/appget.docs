@@ -43,14 +43,13 @@ module.exports = {
         sidebar: [
             '/',
             '/commands/',
-            {
-                title: 'Manifests',
-                collapsable: true,
-                children: [
-                    '/manifests/',
-                    '/manifests/versions.md'
-                ]
-            }
+            '/manifests/',
+            // {
+            //     title: 'Manifests',
+            //     collapsable: true,
+            //     children: [
+            //     ]
+            // }
         ]
     }
 }

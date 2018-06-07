@@ -1,30 +1,25 @@
 # Package Manifest Overview
 
-Rather than using installation scripts AppGet uses `YAML` files to define application packages. Manifest file provides all information required to install a package by AppGet. We believe this is dramatically more secure and much easier to maintain that the alternative.
+Rather than using scripts AppGet uses `YAML` files to define application packages. The manifest file provides all information required to install a package by AppGet. We believe this is dramatically more secure and much easier to maintain that the alternatives.
 
-All available packages are hosted in our official [GitHub Repository](https://github.com/appget/appget.packages).
+All available packages are hosted in our official [GitHub Repository](https://github.com/appget/appget.packages). You can review and propose changes to any of the manifests using a pull-request.
 
 For example, [vlc.yaml](https://github.com/appget/appget.packages/blob/master/manifests/vlc/vlc.yaml)
 
 ```yaml
 id: vlc
 name: VLC media player
-version: 3.0.2
+version: 3.0.3
 home: https://videolan.org/
 license: GNU Lesser General Public License v2.1+
 installMethod: NSIS
 installers:
-- location: https://get.videolan.org/vlc/3.0.2/win32/vlc-3.0.2-win32.exe
-  sha256: 30160a607e5ec2e4a2718ea2e37764647f6cfc9c7eb31f58f9f873521726695a
-- location: https://get.videolan.org/vlc/3.0.2/win64/vlc-3.0.2-win64.exe
-  sha256: a40f651bb2f5a9088637b7b43bb73c16b96192b7ceac2d21cef556ed94bfc84d
+- location: https://get.videolan.org/vlc/3.0.3/win32/vlc-3.0.3-win32.exe
+  sha256: 65bf42b15a05b13197e4dd6cdf181e39f30d47feb2cb6cc929db21cd634cd36f
+- location: https://get.videolan.org/vlc/3.0.3/win64/vlc-3.0.3-win64.exe
+  sha256: 59940804b6a89f0c83b576247dd90f2c5a22b8c7f040ebf82813c59968828035
   architecture: x64
-
 ```
-
-
-
-
 
 ##  Root Fields
 
@@ -34,13 +29,13 @@ installers:
 
 `version` Version of the application
 
-`home` Fully qualified product home page URL where users can see basic information about the application
+`home` Fully qualified product homepage URL where users can see vendor provided information about the application
 
-`repo` Fully qualified URL that points to the software repository hosting the source of the application, usually on GitHub, GitLab, SourceForge etc.
+`repo` Fully qualified URL that points to the software repository hosting the source of the application; usually on GitHub, GitLab, BitBucket, SourceForge, etc.
 
-`license` Name of the software license under which the application has been released
+`license` Software license under which the application has been released and distributed
 
-`installMethod`  (Required) The install method used by the package. One of the following values must be used:
+`installMethod`  (Required) The install method used by the package. Supported values are:
 
  * `MSI` MSI or Windows Installer
  * `Inno` [Inno Setup](http://www.jrsoftware.org/isinfo.php) by JRSoftware
@@ -48,23 +43,21 @@ installers:
  * `Wix`  [Wix Toolset](http://wixtoolset.org/)
 * `NSIS` [Nullsoft Scriptable Install System](http://nsis.sourceforge.net/Main_Page)
 * `InstallBuilder` [BitRock InstallBuilder](https://installbuilder.bitrock.com/)
-
-
-
+* `Custom` none of the above
 
 ## Installers
 
-`installers` List contains contains all installers available to install the application. Each manifest must have at least one installer. But can contain more to support multiple CPU architectures or different versions of Windows.
+`installers` list contains all installers available for the application. Each manifest must have at least one installer. But can have more to support multiple CPU architectures or different versions of Windows.
 
 ### Installer Fields
 
-`location` Fully qualified link to directly download the URL. *Currently only HTTP/HTTPS protocols are supported but support for more protocols are planed.*
+`location` Fully qualified URI that points to the installer. *Currently only HTTP and HTTPS protocols are supported but support for more protocols are planned.*
 
-`architecture` CPU architecture supported by this installer. One of the following values must be used: `x86`, `x64`. If this value is omitted default value of `x86` will be assumed
+`architecture` CPU architecture supported by this installer. Supported values are: `x86`, `x64`. If architecture isn't specified `x86` will be assumed
 
-`sha256|sha1|md5` Used to validate the integrity and correctness of the downloaded file
+`sha256` Used to validate the integrity and correctness of the downloaded file
 
-`minWindowsVersion` Minimum version of Windows required for the application to install/work correctly
+`minWindowsVersion` Minimum version of Windows required for the application to install/work correctly.
 
 *Table below describes the list of supported values for `minWindowsVersion`*
 
@@ -83,17 +76,17 @@ installers:
 The “Package ID” is the primary identifier for an application in AppGet. It’s also the value users will use to install or interact with the package.
 
 ::: warning Keep in Mind
-Package ID is not meant to EVER change, take extra care to pick an appropriate package name that follows the convention and rules bellow.
+Package ID is not meant EVER to change, take extra care to pick an appropriate package name that follows the convention and rules below.
 :::
 
 Here are some things to keep in mind when trying to create an ID for a new package
 
 - Only allowed to contain letters, numbers and dash. Things like `+` should be spelled out, for example `notepad-plus-plus`
 - Only lowercase letters are allowed
-- Usually don't contain the vendor name unless app name is too generic. For example use `adobe-reader` instead of `reader`
+- Vendor name is usually omitted, unless application name is too generic. For example use `adobe-reader` instead of `reader`
 - Don't include the version of the App in the ID unless the version is part of the Product Name. This exception usually comes in the form of year, for example `office-2017` `visual-studio-community-2017`
 - Keep the edition of the app in the ID if more than one edition is available, e.g. `docker-community-edition`
-- Keep the release channel of the app in the ID except for the main channel. example, `chrome` should install the regular version of chrome while `chrome-canarry` should install the Canary release channel. Same rule and apply to LTS releases as well, for example `node` and `node-lts`
+- Keep the release channel of the app in the ID except for the main channel. example, `chrome` should install the regular version of chrome while `chrome-canary` should install the Canary release channel. Same rule and apply to LTS releases as well, for example `node` and `node-lts`
 - Inevitably, there are a small number of exceptions not covered by the rules. Don’t hesitate to [contact the community](https://github.com/appget/appget.packages/issues) if you need any clarification.
 
 
@@ -102,11 +95,11 @@ Here are some things to keep in mind when trying to create an ID for a new packa
 
 ::: tip Relax :)
 
-Package name is not nearly as important as the Package ID since it's only used for display purposes and can be updated which out breakage at anytime
+Package name is not nearly as important as the Package ID since it's only used for display purposes and can be updated without breaking anything.
 
 :::
 
-- Start with the English marketing name of the Application, such as `Google Chrome`, `Microsoft Office`, `Dropbox`. Easiest way to find this name is too look up the application in Wikipedia, Article title is usually the name we are looking for.
+- Start with the English marketing name of the Application, such as `Google Chrome`, `Microsoft Office`, `Dropbox`. The easiest way to find this name is too look up the application in Wikipedia; the Article title is usually the name we are looking for.
 - Remove the  version numbers
 - Don't include hardware designations such as “for x86”, “32-bit”
 - Pay attention to details, for example: `Git Hub` vs `GitHub` vs `github`
@@ -115,21 +108,17 @@ Package name is not nearly as important as the Package ID since it's only used f
 
 ## Tags and Versions
 
-Even thought tags and versions might seem similar they server very different purposes.
+Even though tags and versions might seem similar they serve very different purposes. You can think of **Tags** and **Versions** in the same way you think of **ID** and **Name**
 
-
-
-**Tags** are used to select a specific releases when installing packages.
-
-
+**Version** is mostly used for display purposes. It lets the user know which version of the application will be installed by the manifest. In the future, it will also be used to allow you to upgrade already existing packages. On the other hand **Tags** are used to install a specific version of an application when available. 
 
 
 
 # Tags
 
-AppGet uses tags similar to the way that docker repository uses tags using the following syntax `package-id:tag` . When interacting with packages omitting the tag uses the default `latest` tag. for example `appget install node` and `appget install node:latest` have the same effect.
+AppGet uses tags similar to the way that docker repository uses tags using the `package-id:tag` syntax. When interacting with packages omitting the tag assumes the default `latest` tag. for example `appget install node` and `appget install node:latest` have the same effect.
 
-Don't use tags for release channels (LTS, nightly, beta, preview etc.). Release channels should be appended to the ID of the package [(See Package ID)](#package-id) and are considered separate packages.  For example `chrome` and `chrome-canary` are considered two different packages. However different release channels can have their own underlying version tags, for example `node-lts:8.11` and `node:10.1`
+Tags aren't meant to be used for release channels (LTS, nightly, beta, preview etc.). Release channels should be appended to the ID of the package [(See Package ID)](#package-id) and are considered separate packages. For example `chrome` and `chrome-canary` are considered two different packages. However different release channels can have their own underlying version tags, for example `node-lts:8.11` and `node:10.1`
 
 Tags should only be used when being able to install and stay on a specific major release is **both common AND desirable.**
 
@@ -138,45 +127,5 @@ Tags should only be used when being able to install and stay on a specific major
 When should a tag be used:
 
 - If newer versions of an application introduce **major** breaking change or drop of **major** functionality
-- If for **mission critical** reasons staying on specific version of a package is common, most commonly used for development platforms e.g. Node, Python etc.
-- For licensing reasons, if newer versions of an app require a new/upgraded license/key
-
-
-
-## Package Versioning
-
-AppGet tries to follow the spirit of `Semantic Versioning`_. However we try to take a more realistic approach to Semantic Versioning rather than an idealistic one. If you have any questions feel free to `contact the maintainers`_
-
-::: tip Note
-These rules only apply to applications that don't support silent background updates. *e.g. Google Chrome, Dropbox*.
-For these applications you shouldn't specify a version in the manifest or as part of the manifest name.
-:::
-
-## Manifest File Name
-
-Manifest file name is constructed by joining the `App ID`_ with the major version or least of the application separated by a period.
-
-| App ID          | Version          | Manifest File Name    |
-| --------------- | ---------------- | --------------------- |
-| `vlc`           | `2.1.5`          | `vlc.2.yaml`          |
-| `subline-text`  | `2.0.2`          | `sublime-text.2.yaml` |
-| `google-chrome` | *Silent Updates* | `google-chrome.yaml`  |
-
-This allows us to maintain a separate manifest for major versions of applications without having to create and maintain a new manifest for more frequent and less significant minor releases.
-
-## Manifest Version Field
-
-`Version` field specified in the manifest should match the exact version of the application that would be downloaded by that package.
-
-This field is used to detect updates for users that have the package installed.
-
-
-
-| App Name              | Version          | Manifest File Name |
-| --------------------- | ---------------- | ------------------ |
-| VLC                   | `2.1.5`          | `2.1.5`            |
-| Microsoft Office 2013 | `15.0`           | `15.0`             |
-| Google Chrome         | *Silent Updates* | *Don't Set*        |
-
-
-
+- If for **mission critical** reasons staying on a specific version of an application is common. This is commonly used for development platforms e.g. Node, Python etc.
+- For licensing purposes, For example, if newer versions of an app require a new/upgraded license/key

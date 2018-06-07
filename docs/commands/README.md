@@ -5,7 +5,7 @@ All of the commands below share the following arguments
 
 `-v` or `--verbose`Log more detailed information, useful for diagnosing issues.
 
-`--help` prints out list of available arguments and parameters for the command
+`--help` prints out a list of available arguments and parameters for the command
 
 :::
 ## Install
@@ -52,8 +52,8 @@ Search AppGet's [package repository](https://github.com/appget/appget.packages/t
 
 `appget search google -v`
 
-
 ## View
+
 View the package manifest used when installing the package. The output is the raw content of the manifests as available in [GitHub](https://github.com/appget/appget.packages/tree/master/manifests).
 
 #### Format:
@@ -64,11 +64,22 @@ View the package manifest used when installing the package. The output is the ra
 
 `appget view git --verbose`
 
+## Create
 
-<!-- ## Create -->
+Create a new manifest for a missing application.  AppGet will automatically try and figure out most of the values needed but might ask you to fill or confirm anything it isn't sure about.
+
+#### Format:
+
+create {download_url}`
+
+#### Examples:
+
+`appget create https://github.com/atom/atom/releases/download/v1.27.1/AtomSetup.exe `
 
 ## Help
+
 Prints a list of available commands and a short description.
 
 #### Examples:
+
 `appget help`
