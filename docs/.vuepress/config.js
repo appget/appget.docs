@@ -24,7 +24,8 @@ module.exports = {
         lastUpdated: 'Last Updated',
         algolia: {
             apiKey: 'd1275e06d940dd1c21dcd9200a559f8e',
-            indexName: 'appget'
+            indexName: 'appget',
+            algoliaOptions: { 'facetFilters': [""] },
         },
         nav: [
             // {
