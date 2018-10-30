@@ -2,13 +2,13 @@
 
 ### Install AppGet
 
-Install the latest version of AppGet from [GitHub](https://github.com/appget/appget/releases)
+Install the latest version of AppGet [Download](https://dl.appget.net/appget/appget.setup.exe)
 
 
 
 ### Installing an Application
 
-- Browse the list of [Available Packages](https://github.com/appget/appget.packages/tree/master/manifests)
+- Browse the list of [Available Packages](https://appget.net/packages)
 
 - Install a package:
 

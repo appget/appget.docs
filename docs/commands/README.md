@@ -10,7 +10,7 @@ All of the commands below share the following arguments
 :::
 ## Install
 
-`install` is the primary command of AppGet, you can use it to install any of the [available packages](https://github.com/appget/appget.packages/tree/master/manifests).
+`install` is the primary command of AppGet, you can use it to install any of the [available packages](https://appget.net/packages).
 
 #### Format:
 
@@ -42,7 +42,7 @@ If AppGet can't find the exact package ID you tried to install, it'll automatica
 
 
 ## Search
-Search AppGet's [package repository](https://github.com/appget/appget.packages/tree/master/manifests).
+Search AppGet's [package repository](https://appget.net/packages).
 
 #### Format:
 `search {term}`

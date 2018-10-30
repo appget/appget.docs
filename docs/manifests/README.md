@@ -110,7 +110,7 @@ Package name is not nearly as important as the Package ID since it's only used f
 
 Even though tags and versions might seem similar they serve very different purposes. You can think of **Tags** and **Versions** in the same way you think of **ID** and **Name**
 
-**Version** is mostly used for display purposes. It lets the user know which version of the application will be installed by the manifest. In the future, it will also be used to allow you to upgrade already existing packages. On the other hand **Tags** are used to install a specific version of an application when available. 
+**Version** is mostly used for display purposes. It lets the user know which version of the application will be installed by the manifest. In the future, it will also be used to allow you to upgrade already existing packages. On the other hand **Tags** are used to install a specific version of an application when available.
 
 
 
