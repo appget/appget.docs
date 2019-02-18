@@ -46,6 +46,20 @@ Search AppGet's [package repository](https://appget.net/packages).
 
 `appget search google -v`
 
+## list
+
+Display a list of all currently installed packages that are known to AppGet.  The list will include both outdated and up-to-date packages.
+
+:::tip Keep in Mind
+Currently AppGet can't match 100% of packages available in the library. That's why some of your installed packages might be missing from this list even though they are available in the AppGet library. we are constantly working to improving the matching algorithm.
+:::
+
+#### Examples:
+
+`appget list`
+
+
+
 ## view
 
 View the package manifest used when installing the package. The output is the raw content of the manifests as available in [GitHub](https://github.com/appget/appget.packages/tree/master/manifests).
