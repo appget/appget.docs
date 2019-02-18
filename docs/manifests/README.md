@@ -31,7 +31,7 @@ installers:
 
 `home` Fully qualified product homepage URL where users can see vendor provided information about the application
 
-`repo` Fully qualified URL that points to the software repository hosting the source of the application; usually on GitHub, GitLab, BitBucket, SourceForge, etc.
+`repo` Fully qualified URL that points to the software repository hosting the source of the application; usually on GitHub, GitLab, Bitbucket, SourceForge, etc.
 
 `license` Software license under which the application has been released and distributed
 
