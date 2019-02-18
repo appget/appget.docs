@@ -1,0 +1,3 @@
+[build]
+  command = "yarn test && yarn build"
+  publish = "dist"
