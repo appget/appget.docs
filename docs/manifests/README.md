@@ -4,6 +4,8 @@ Rather than using scripts AppGet uses `YAML` files to define application package
 
 All available packages are hosted in our official [GitHub Repository](https://github.com/appget/appget.packages). You can review and propose changes to any of the manifests using a pull-request.
 
+To create a new manifest and propose its addition to the repository, use the [`create` command](/commands/#create).
+
 For example, [vlc.yaml](https://github.com/appget/appget.packages/blob/master/manifests/vlc/vlc.yaml)
 
 ```yaml
